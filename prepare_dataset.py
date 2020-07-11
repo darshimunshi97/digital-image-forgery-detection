@@ -47,28 +47,16 @@ def preprocess_image(image):
     # cv2.imshow('colored', colored)
     return colored
 
-
-
 DDSM_DATASET = 'CDDSM/figment.csee.usf.edu/pub/DDSM/cases'
-
-
-# In[27]:
 
 
 NORMAL = os.path.join(DDSM_DATASET, 'normals')
 ABNORMAL = os.path.join(DDSM_DATASET, 'cancers')
 
-
-# In[28]:
-
-
 import glob
 import random
 normalGlob = glob.glob(NORMAL+"/*/*/*.jpg")
 abNormalGlob = glob.glob(ABNORMAL+"/*/*/*.jpg")
-
-
-# new_num_arr = np.load('dataset/np_casia_one_au.npy') # load
 
 def prepare_ddsm_dataset():
     casia_one_au_arr = []
